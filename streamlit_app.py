@@ -1,4 +1,3 @@
-from transformers import pipeline
 import streamlit as st
 import pandas as pd
 import time
@@ -18,15 +17,24 @@ st.write('Aplikacja pozwala na sprawdzenie wydzwięku emocjonalnego sentencji. I
 
 st.header('Przetwarzanie języka naturalnego')
 
+import streamlit as st
+from transformers import pipeline
 
 option = st.selectbox(
     "Opcje",
     [
         "Translator eng - de",
-        #"Wydźwięk emocjonalny tekstu (eng)"
+        "Wydźwięk emocjonalny tekstu (eng)"
     ]
 )
 
+if option == "Wydźwięk emocjonalny tekstu (eng)":
+    text = st.text_area(label="Wpisz tekst")
+    if text:
+        classifier = pipeline("sentiment-analysis")
+        answer = classifier(text)
+        st.write(answer)
+        
 if option == "Translator eng - de":
     text = st.text_area(label="Wpisz tekst")
     if text:
