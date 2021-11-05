@@ -8,7 +8,7 @@ import os
 st.success('Gratulacje! Aplikacja gotowa do działania')
 
 st.title('Emocjonalny translator')
-st.image("SUML/logo.jpg")
+st.image("logo.jpg")
 
 st.header('O aplikacji')
 
