@@ -17,7 +17,6 @@ st.write('Aplikacja pozwala na sprawdzenie wydzwięku emocjonalnego sentencji. I
 
 st.header('Przetwarzanie języka naturalnego')
 
-import streamlit as st
 from transformers import pipeline
 
 option = st.selectbox(
