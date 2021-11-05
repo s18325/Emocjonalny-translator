@@ -1,4 +1,3 @@
-from transformers import pipeline
 import streamlit as st
 import pandas as pd
 import time
@@ -18,6 +17,8 @@ st.write('Aplikacja pozwala na sprawdzenie wydzwięku emocjonalnego sentencji. I
 
 st.header('Przetwarzanie języka naturalnego')
 
+import streamlit as st
+from transformers import pipeline
 
 option = st.selectbox(
     "Opcje",
