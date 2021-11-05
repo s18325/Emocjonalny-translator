@@ -23,19 +23,9 @@ option = st.selectbox(
     "Opcje",
     [
         "Translator eng - de",
-        "Wydźwięk emocjonalny tekstu (eng)"
+        #"Wydźwięk emocjonalny tekstu (eng)"
     ]
 )
-
-if option == "Wydźwięk emocjonalny tekstu (eng)":
-    text = st.text_area(label="Wpisz tekst")
-    if text:
-        with st.spinner(text="Próbuję zweryfikować jakie emocje towarzyszą temu co napisłeś..."):
-            classifier = pipeline("sentiment-analysis")
-            answer = classifier(text)
-        st.success("Już wiem...")
-        st.balloons()
-        st.write(answer)
 
 if option == "Translator eng - de":
     text = st.text_area(label="Wpisz tekst")
